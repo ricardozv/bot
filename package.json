@@ -1,0 +1,25 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "crypto bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardozv/bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardozv/bot/issues"
+  },
+  "homepage": "https://github.com/ricardozv/bot#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ccxt": "^1.48.20",
+    "dotenv": "^8.2.0"
+  }
+}
