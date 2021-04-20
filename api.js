@@ -7,7 +7,7 @@ async function publicCall(path, data, method = 'GET') {
         const qs = data ? `?${querystring.stringify(data)}` : '';
         const result = await axios ({
             method, 
-            url: `${process.env.API_URL}${path}`
+            url: `${process.env.API_URL}${path}${qs}`
 
         })
         return result.data;
@@ -19,11 +19,11 @@ async function publicCall(path, data, method = 'GET') {
 }
 
 async function time() {
-    return publicCall('/v3/time')
+    return publicCall('/v3/time');
 }
 
-async function depth( symbol = 'XRPBRL') {
-    return publicCall('/v3/depth', {symbol, limit })
+async function depth( symbol = 'XRPBRL', limit = 5) {
+    return publicCall('/v3/depth', {symbol, limit });
 }
 
-module.exports = { time }
+module.exports = { time, depth }
