@@ -1,13 +1,5 @@
-require ('dotenv').config;
-const ccxt = require('ccxt');
-const axios = require('axios');
+const api = require('./api');
 
-const tick = async() => {
-
-}
-
-const run = () => {
-    const config = {
-        asset:
-    }
-}
+setInterval(async () => {
+    console.log(await api.time());
+}, process.env.CRAWLER_INTERVAL)
